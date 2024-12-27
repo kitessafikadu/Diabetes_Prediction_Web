@@ -65,144 +65,156 @@ const DiabetesPredictionForm = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
-      <div className="bg-white shadow-2xl rounded-lg p-6 w-full max-w-lg">
+      <div className="bg-white shadow-2xl rounded-lg p-6 w-full max-w-4xl">
         <h1 className="text-2xl font-bold text-purple-700 text-center mb-6">
           Diabetes Prediction
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-2">
-          {/* Gender */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">
-              Gender
-            </label>
-            <select
-              name="gender"
-              value={formData.gender}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="flex flex-wrap -mx-2">
+            {/* Left Column */}
+            <div className="w-full md:w-1/2 px-2 space-y-4">
+              {/* Gender */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Gender
+                </label>
+                <select
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
 
-          {/* Age */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">Age</label>
-            <input
-              type="number"
-              step="1"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-          </div>
+              {/* Age */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Age
+                </label>
+                <input
+                  type="number"
+                  step="1"
+                  name="age"
+                  value={formData.age}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
 
-          {/* Hypertension */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">
-              Hypertension
-            </label>
-            <select
-              name="hypertension"
-              value={formData.hypertension}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="">Select Option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
+              {/* Hypertension */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Hypertension
+                </label>
+                <select
+                  name="hypertension"
+                  value={formData.hypertension}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                >
+                  <option value="">Select Option</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
 
-          {/* Heart Disease */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">
-              Heart Disease
-            </label>
-            <select
-              name="heart_disease"
-              value={formData.heart_disease}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="">Select Option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
+              {/* Heart Disease */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Heart Disease
+                </label>
+                <select
+                  name="heart_disease"
+                  value={formData.heart_disease}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                >
+                  <option value="">Select Option</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
 
-          {/* Smoking History */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">
-              Smoking History
-            </label>
-            <select
-              name="smoking_history"
-              value={formData.smoking_history}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="">Select Option</option>
-              <option value="Never">Never</option>
-              <option value="No Info">No Info</option>
-              <option value="Current">Current</option>
-              <option value="Former">Former</option>
-              <option value="Ever">Ever</option>
-              <option value="Not Current">Not Current</option>
-            </select>
-          </div>
+            {/* Right Column */}
+            <div className="w-full md:w-1/2 px-2 space-y-4">
+              {/* Smoking History */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Smoking History
+                </label>
+                <select
+                  name="smoking_history"
+                  value={formData.smoking_history}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                >
+                  <option value="">Select Option</option>
+                  <option value="Never">Never</option>
+                  <option value="No Info">No Info</option>
+                  <option value="Current">Current</option>
+                  <option value="Former">Former</option>
+                  <option value="Ever">Ever</option>
+                  <option value="Not Current">Not Current</option>
+                </select>
+              </div>
 
-          {/* BMI */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">BMI</label>
-            <input
-              type="number"
-              step="0.1"
-              name="bmi"
-              value={formData.bmi}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-          </div>
+              {/* BMI */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  BMI
+                </label>
+                <input
+                  type="number"
+                  step="0.1"
+                  name="bmi"
+                  value={formData.bmi}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
 
-          {/* HbA1c Level */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">
-              Average Blood Sugar
-            </label>
-            <input
-              type="number"
-              step="0.1"
-              name="HbA1c_level"
-              value={formData.HbA1c_level}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-          </div>
+              {/* HbA1c Level */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Average Blood Sugar
+                </label>
+                <input
+                  type="number"
+                  step="0.1"
+                  name="HbA1c_level"
+                  value={formData.HbA1c_level}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
 
-          {/* Blood Glucose Level */}
-          <div>
-            <label className="block text-gray-600 font-medium mb-2">
-              Blood Glucose Level
-            </label>
-            <input
-              type="number"
-              name="blood_glucose_level"
-              value={formData.blood_glucose_level}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
+              {/* Blood Glucose Level */}
+              <div>
+                <label className="block text-gray-600 font-medium mb-2">
+                  Blood Glucose Level
+                </label>
+                <input
+                  type="number"
+                  name="blood_glucose_level"
+                  value={formData.blood_glucose_level}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Submit Button */}

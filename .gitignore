@@ -1,21 +1,3 @@
-# .gitignore
-
-# Ignore the virtual environment folder
 env/
-
-# Node modules for frontend (React)
 frontend/node_modules/
-
-# Python bytecode and cache
-__pycache__/
-*.pyc
-
-# Environment-specific files (e.g., `.env` files, etc.)
-.env
-
-# Log files
-*.log
-
-# Other generated files
-dist/
-build/
+backend/__pycache__/
